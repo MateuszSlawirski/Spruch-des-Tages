@@ -1,0 +1,172 @@
+/* style.css */
+
+/* Allgemeine Stile für den Body */
+body {
+    background-color: #636669; /* Eine hellgraue Hintergrundfarbe */
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* Eine angenehme Schriftart-Familie */
+    color: #0d0d0d; /* Dunklerer Text für bessere Lesbarkeit */
+    line-height: 1.6;
+}
+
+/* Container-Styling */
+.container {
+    max-width: 800px; /* Begrenzt die Breite des Containers */
+    margin: 30px auto; /* Zentriert den Container und gibt etwas oberen/unteren Abstand */
+    padding: 20px;
+    background-color: #f2f0f1; /* Weißer Hintergrund für den Inhalt */
+    border-radius: 30px; /* Leicht abgerundete Ecken */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sanfter Schatten für Tiefe */
+}
+
+/* Überschriften */
+h1, h2 {
+    color: #010b16f3; /* Dunkleres Blau für Überschriften */
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Card-Styling (für Spruch des Tages) */
+.card {
+    border: none; /* Entfernt den Standard-Rand der Card */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Leichter Schatten für die Card */
+    overflow: hidden; /* Stellt sicher, dass der Schatten korrekt angezeigt wird */
+}
+
+.card-header {
+    background-color: #007bff; /* Hintergrundfarbe für den Card-Header */
+    color: white; /* Weiße Schrift im Header */
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 15px 20px;
+    border-bottom: none;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* Blockquote-Styling für den Spruch */
+blockquote#spruch-anzeige {
+    font-size: 1.4em; /* Größere Schrift für den Spruch */
+    font-style: italic; /* Kursivschrift für Zitate */
+    color: #555; /* Etwas dunklerer Grauton */
+    border-left: 5px solid #007bff; /* Blauer Strich links als Zitat-Markierung */
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+blockquote#spruch-anzeige p {
+    margin-bottom: 0; /* Entfernt den Standard-Margin des Paragraphen im Blockquote */
+}
+
+.blockquote-footer {
+    font-size: 0.9em;
+    color: #777;
+    text-align: right; /* Autor rechtsbündig ausrichten */
+    margin-top: 10px;
+    display: block; /* Stellt sicher, dass der Footer eine eigene Zeile einnimmt */
+}
+
+/* Button-Styling */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Formular-Styling */
+#neuer-spruch-form {
+    background-color: #f2f7fc; /* Heller bläulicher Hintergrund für das Formular */
+    border: 1px solid #cce5ff; /* Passender Rahmen */
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #444;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px 12px;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+textarea#spruch-input {
+    min-height: 100px; /* Mindesthöhe für das Textarea */
+    resize: vertical; /* Nur vertikales Resizing erlauben */
+}
+
+/* Liste der Sprüche */
+#spruch-liste .list-group-item {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 15px 20px;
+    display: flex; /* Für die Anordnung des Löschen-Buttons */
+    justify-content: space-between; /* Verteilt Inhalt und Button */
+    align-items: center; /* Zentriert vertikal */
+}
+
+#spruch-liste .list-group-item p {
+    font-size: 1.1em;
+    color: #495057;
+    margin-bottom: 5px;
+}
+
+#spruch-liste .list-group-item small {
+    display: block; /* Macht den Autor zu einem Blockelement */
+    text-align: right; /* Rechtsbündige Ausrichtung des Autors */
+    color: #6c757d;
+}
+
+/* Optional: Füge hier spezifisches Styling für den Löschen-Button und den Zeichenzähler hinzu,
+   sobald du diese Funktionen in deinem JavaScript implementiert hast. */
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: background-color 0.2s ease;
+    margin-left: 15px; /* Abstand zum Spruch-Text */
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.char-counter {
+    font-size: 0.8em;
+    color: #6c757d;
+    text-align: right;
+    margin-top: 5px;
+}
